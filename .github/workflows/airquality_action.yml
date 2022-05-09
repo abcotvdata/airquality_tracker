@@ -1,0 +1,27 @@
+on:
+  schedule:
+    - cron: '* 15 * * *'
+      # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+name: Air Quality data maps scrape reshape build
+
+jobs:
+  render:
+    name: Gather latest air quality data
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v1
+      - name: Set up pandoc for Rmd docs
+        uses: r-lib/actions/setup-pandoc@v1
+      - name: Install dependencies and packages
+        run: Rscript -e 'install.packages(c("tidyverse","sf","leaflet","htmlwidgets","leaflet.providers","leaflet.extras"))'
+      - name: Reshape data, make air quality maps
+        run: Rscript scripts/airquality_scrape_build.R
+      - name: Commit results
+        run: |
+          git add -A
+          git commit -m 'New AQ data. Maps updated!' || echo "No changes"
+          git push origin || echo "No changes to commit"
+          
