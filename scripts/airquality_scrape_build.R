@@ -23,7 +23,7 @@ airpal <- colorFactor(palette = c("#b1dbad",
 
 # SAN FRANCISCO
 airquality_map_SF <- leaflet() %>%
-  setView(-73.9, 40.7, zoom = 11, zoom = 6) %>% 
+  setView(-73.9, 40.7, zoom = 11) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
