@@ -37,7 +37,7 @@ airquality_map_SF <- leaflet() %>%
 
 # FRESNO
 airquality_map_Fresno <- leaflet() %>%
-  setView(-122.4194, 37.77, zoom = 9) %>% 
+  setView(-119.7871, 36.73, zoom = 9) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
