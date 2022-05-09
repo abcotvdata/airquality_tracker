@@ -37,7 +37,7 @@ airquality_map_SF <- leaflet() %>%
 
 # FRESNO
 airquality_map_Fresno <- leaflet() %>%
-  setView(-119.991229, 36.957379, zoom = 8) %>% 
+  setView(-122.4194, 37.77, zoom = 9) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
@@ -51,7 +51,7 @@ airquality_map_Fresno <- leaflet() %>%
 
 # LOS ANGELES
 airquality_map_LA <- leaflet() %>%
-  setView(-118.161229, 33.957379, zoom = 7) %>% 
+  setView(-118.161229, 33.957379, zoom = 8) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
@@ -65,7 +65,7 @@ airquality_map_LA <- leaflet() %>%
 
 # HOUSTON
 airquality_map_Houston <- leaflet() %>%
-  setView(-95.5, 29.75, zoom = 11) %>% 
+  setView(-95.5, 29.75, zoom = 10) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
