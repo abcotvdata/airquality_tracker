@@ -65,7 +65,7 @@ airquality_map_LA <- leaflet() %>%
 
 # HOUSTON
 airquality_map_Houston <- leaflet() %>%
-  setView(-95.5, 29.75, zoom = 10) %>% 
+  setView(-95.5, 29.75, zoom = 9) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
@@ -79,7 +79,7 @@ airquality_map_Houston <- leaflet() %>%
 
 # NATIONAL
 airquality_map_National <- leaflet() %>%
-  setView(-100.6, 38.2, zoom = 5) %>% 
+  setView(-97.6, 38.2, zoom = 5) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
