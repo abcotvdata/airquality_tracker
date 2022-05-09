@@ -19,9 +19,11 @@ airpal <- colorFactor(palette = c("#b1dbad",
                       na.color = "#ff8280")
 
 # Temporary replacement for existing Cali-only
-# wildfire map include fires and perimeters only
-airquality_map <- leaflet() %>%
-  setView(-122.5, 37.5, zoom = 6) %>% 
+# air quality maps for all three CA stations
+
+# SAN FRANCISCO
+airquality_map_SF <- leaflet() %>%
+  setView(-73.9, 40.7, zoom = 11, zoom = 6) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
@@ -32,9 +34,68 @@ airquality_map <- leaflet() %>%
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
             position = 'bottomleft')
-airquality_map
+
+# FRESNO
+airquality_map_Fresno <- leaflet() %>%
+  setView(-119.991229, 36.957379, zoom = 8) %>% 
+  addProviderTiles(provider = "Stamen.Toner") %>%
+  addPolygons(data = air_quality, 
+              color = ~airpal(gridcode),
+              weight = 0,
+              fillOpacity = 0.6) %>%
+  addLegend(values = values(air_quality$gridcode), title = "Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+            group = "Air Quality", 
+            colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
+            labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
+            position = 'bottomleft')
+
+# LOS ANGELES
+airquality_map_LA <- leaflet() %>%
+  setView(-118.161229, 33.957379, zoom = 7) %>% 
+  addProviderTiles(provider = "Stamen.Toner") %>%
+  addPolygons(data = air_quality, 
+              color = ~airpal(gridcode),
+              weight = 0,
+              fillOpacity = 0.6) %>%
+  addLegend(values = values(air_quality$gridcode), title = "Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+            group = "Air Quality", 
+            colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
+            labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
+            position = 'bottomleft')
+
+# HOUSTON
+airquality_map_Houston <- leaflet() %>%
+  setView(-95.5, 29.75, zoom = 11) %>% 
+  addProviderTiles(provider = "Stamen.Toner") %>%
+  addPolygons(data = air_quality, 
+              color = ~airpal(gridcode),
+              weight = 0,
+              fillOpacity = 0.6) %>%
+  addLegend(values = values(air_quality$gridcode), title = "Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+            group = "Air Quality", 
+            colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
+            labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
+            position = 'bottomleft')
+
+# NATIONAL
+airquality_map_National <- leaflet() %>%
+  setView(-104.6, 38.2, zoom = 5) %>% 
+  addProviderTiles(provider = "Stamen.Toner") %>%
+  addPolygons(data = air_quality, 
+              color = ~airpal(gridcode),
+              weight = 0,
+              fillOpacity = 0.6) %>%
+  addLegend(values = values(air_quality$gridcode), title = "Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+            group = "Air Quality", 
+            colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
+            labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
+            position = 'bottomleft')
 
 # Export as HTML file
-saveWidget(california_map, 'docs/map_california.html', title = "ABC Owned Television Stations Wildfire Tracker", selfcontained = TRUE)
-saveWidget(airquality_map, 'docs/wildfire_map.html', title = "ABC Owned Television Stations Wildfire Tracker", selfcontained = TRUE)
+# saveWidget(california_map, 'docs/map_california.html', title = "ABC Owned Television Stations Wildfire Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_SF, 'docs/map_AQ_SF.html', title = "ABC Owned Television Stations ABC7 Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_LA, 'docs/map_AQ_LA.html', title = "ABC Owned Television Stations ABC7 Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_Fresno, 'docs/map_AQ_Fresno.html', title = "ABC30 Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_Houston, 'docs/map_AQ_Houston.html', title = "ABC13 Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_National, 'docs/map_AQ_National.html', title = "ABC Owned Television Stations Air Quality Tracker", selfcontained = TRUE)
 
