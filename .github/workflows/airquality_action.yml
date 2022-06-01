@@ -16,7 +16,7 @@ jobs:
       - name: Set up pandoc for Rmd docs
         uses: r-lib/actions/setup-pandoc@v1
       - name: Install dependencies and packages
-        run: Rscript -e 'install.packages(c("tidyverse","sf","leaflet","htmlwidgets","leaflet.providers","leaflet.extras"))'
+        run: Rscript -e 'install.packages(c("sf","leaflet","htmlwidgets","leaflet.providers","leaflet.extras"))'
       - name: Reshape data, make air quality maps
         run: Rscript scripts/airquality_scrape_build.R
       - name: Commit results
