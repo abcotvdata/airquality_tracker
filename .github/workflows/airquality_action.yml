@@ -9,7 +9,7 @@ name: Air Quality data maps scrape reshape build
 jobs:
   render:
     name: Gather latest air quality data
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - uses: r-lib/actions/setup-r@v2
