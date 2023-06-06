@@ -63,6 +63,20 @@ airquality_map_LA <- leaflet() %>%
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
             position = 'bottomleft')
 
+# NEW YORK
+airquality_map_NYC <- leaflet() %>%
+  setView(-74.05, 40.712, zoom = 10) %>% 
+  addProviderTiles(provider = "Stamen.Toner") %>%
+  addPolygons(data = air_quality, 
+              color = ~airpal(gridcode),
+              weight = 0,
+              fillOpacity = 0.6) %>%
+  addLegend(values = values(air_quality$gridcode), title = "Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+            group = "Air Quality", 
+            colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
+            labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
+            position = 'bottomleft')
+
 # HOUSTON
 airquality_map_Houston <- leaflet() %>%
   setView(-95.5, 29.75, zoom = 9) %>% 
@@ -97,5 +111,6 @@ saveWidget(airquality_map_SF, 'docs/map_AQ_SF.html', title = "ABC Owned Televisi
 saveWidget(airquality_map_LA, 'docs/map_AQ_LA.html', title = "ABC Owned Television Stations ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Fresno, 'docs/map_AQ_Fresno.html', title = "ABC30 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Houston, 'docs/map_AQ_Houston.html', title = "ABC13 Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_NYC, 'docs/map_AQ_NYC.html', title = "ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_National, 'docs/map_AQ_National.html', title = "ABC Owned Television Stations Air Quality Tracker", selfcontained = TRUE)
 
