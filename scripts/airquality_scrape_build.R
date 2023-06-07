@@ -136,7 +136,7 @@ airquality_map_Raleigh <- leaflet() %>%
 
 # NATIONAL
 airquality_map_National <- leaflet() %>%
-  setView(-97.6, 38.2, zoom = 5) %>% 
+  setView(-75.162, 39.9526, zoom = 6) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
@@ -156,7 +156,7 @@ saveWidget(airquality_map_Fresno, 'docs/map_AQ_Fresno.html', title = "ABC30 Air 
 saveWidget(airquality_map_Philadelphia, 'docs/map_AQ_Philadelphia.html', title = "6ABC Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Chicago, 'docs/map_AQ_Chicago.html', title = "ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Houston, 'docs/map_AQ_Houston.html', title = "ABC13 Air Quality Tracker", selfcontained = TRUE)
-saveWidget(airquality_map_Houston, 'docs/map_AQ_Raleigh.html', title = "ABC11 Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_Raleigh, 'docs/map_AQ_Raleigh.html', title = "ABC11 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_NYC, 'docs/map_AQ_NYC.html', title = "ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_National, 'docs/map_AQ_National.html', title = "ABC Owned Television Stations Air Quality Tracker", selfcontained = TRUE)
 
