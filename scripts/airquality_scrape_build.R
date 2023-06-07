@@ -6,6 +6,7 @@ library(htmlwidgets)
 # Latest Air Quality geofile from AirNow via federal government
 download.file("https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/AirNowLatestContoursCombined/FeatureServer/0/query?where=0%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&returnCentroid=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pgeojson",
               "data/airnow_aq.geojson")
+
 air_quality <- st_read("data/airnow_aq.geojson")
 
 # Create color palette for air quality
@@ -33,7 +34,7 @@ airquality_map_SF <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # FRESNO
 airquality_map_Fresno <- leaflet() %>%
@@ -47,7 +48,7 @@ airquality_map_Fresno <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # LOS ANGELES
 airquality_map_LA <- leaflet() %>%
@@ -61,7 +62,7 @@ airquality_map_LA <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # NEW YORK
 airquality_map_NYC <- leaflet() %>%
@@ -75,7 +76,7 @@ airquality_map_NYC <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # CHICAGO
 airquality_map_Chicago <- leaflet() %>%
@@ -89,7 +90,7 @@ airquality_map_Chicago <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # PHILLY
 airquality_map_Philadelphia <- leaflet() %>%
@@ -103,7 +104,7 @@ airquality_map_Philadelphia <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # HOUSTON
 airquality_map_Houston <- leaflet() %>%
@@ -117,7 +118,7 @@ airquality_map_Houston <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # RALEIGH
 airquality_map_Raleigh <- leaflet() %>%
@@ -131,7 +132,7 @@ airquality_map_Raleigh <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # NATIONAL
 airquality_map_National <- leaflet() %>%
@@ -145,7 +146,7 @@ airquality_map_National <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'bottomleft')
+            position = 'topright')
 
 # Export as HTML file
 # saveWidget(california_map, 'docs/map_california.html', title = "ABC Owned Television Stations Wildfire Tracker", selfcontained = TRUE)
