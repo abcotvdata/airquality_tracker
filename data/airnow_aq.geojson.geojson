@@ -1,0 +1,11 @@
+
+{
+  "error" : 
+  {
+    "code" : 429, 
+    "message" : "Unable to perform query. Too many requests.", 
+    "details" : [
+      "API calls quota exceeded (6001)! maximum allowed (6000) per Minute. Retry after 60 sec."
+    ]
+  }
+}
