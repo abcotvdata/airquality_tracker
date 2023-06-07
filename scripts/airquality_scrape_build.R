@@ -134,9 +134,23 @@ airquality_map_Raleigh <- leaflet() %>%
             labels=c("<small>Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
             position = 'topright')
 
-# NATIONAL
+# NATIONAL - ZOOMED TO HIGHEST RISK LEVEL AREAS
 airquality_map_National <- leaflet() %>%
   setView(-75.162, 39.9526, zoom = 6) %>% 
+  addProviderTiles(provider = "Stamen.Toner") %>%
+  addPolygons(data = air_quality, 
+              color = ~airpal(gridcode),
+              weight = 0,
+              fillOpacity = 0.6) %>%
+  addLegend(values = values(air_quality$gridcode), title = "<small><small>Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+            group = "Air Quality", 
+            colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
+            labels=c("<small>Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
+            position = 'topright')
+
+# NATIONWIDE
+airquality_map_National <- leaflet() %>%
+  setView(-98.35, 39.5, zoom = 5) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
@@ -159,4 +173,5 @@ saveWidget(airquality_map_Houston, 'docs/map_AQ_Houston.html', title = "ABC13 Ai
 saveWidget(airquality_map_Raleigh, 'docs/map_AQ_Raleigh.html', title = "ABC11 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_NYC, 'docs/map_AQ_NYC.html', title = "ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_National, 'docs/map_AQ_National.html', title = "ABC Owned Television Stations Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_National, 'docs/map_AQ_Nationwide.html', title = "ABC Owned Television Stations Air Quality Tracker", selfcontained = TRUE)
 
