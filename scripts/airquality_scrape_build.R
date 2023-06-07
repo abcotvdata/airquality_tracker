@@ -142,7 +142,7 @@ airquality_map_National <- leaflet() %>%
               color = ~airpal(gridcode),
               weight = 0,
               fillOpacity = 0.6) %>%
-  addLegend(values = values(air_quality$gridcode), title = "Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+  addLegend(values = values(air_quality$gridcode), title = "<small>Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
