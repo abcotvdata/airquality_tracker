@@ -5,7 +5,7 @@
     "code" : 429, 
     "message" : "Unable to perform query. Too many requests.", 
     "details" : [
-      "API calls quota exceeded (6010)! maximum allowed (6000) per Minute. Retry after 60 sec."
+      "API calls quota exceeded (6005)! maximum allowed (6000) per Minute. Retry after 60 sec."
     ]
   }
 }
