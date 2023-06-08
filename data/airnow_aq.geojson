@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "type" : "FeatureCollection", 
   "features" : [
     {
@@ -13405,4 +13406,14 @@
       }
     }
   ]
+=======
+  "error" : 
+  {
+    "code" : 429, 
+    "message" : "Unable to perform query. Too many requests.", 
+    "details" : [
+      "API calls quota exceeded (6007)! maximum allowed (6000) per Minute. Retry after 60 sec."
+    ]
+  }
+>>>>>>> d85d32e2c7b8c1b7248fead8ac71234e033af987
 }
