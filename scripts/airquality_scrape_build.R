@@ -1,5 +1,6 @@
 library(leaflet)
 library(leaflet.providers)
+library(htmltools)
 library(sf)
 library(htmlwidgets)
 
