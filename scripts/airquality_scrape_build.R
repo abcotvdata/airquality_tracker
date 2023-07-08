@@ -20,11 +20,70 @@ airpal <- colorFactor(palette = c("#b1dbad",
                       levels = c("1", "2", "3", "4","5","6"), 
                       na.color = "#ff8280")
 
+# title and subhead for SF map
+
+tag.map.title <- tags$style(HTML("
+  .leaflet-control.map-title {
+    left: 0.5%;
+    top: 0.8%;
+    text-align: left;
+    background-color: background:#0059F6;
+    width: 60%;
+    border-radius: 4px 4px 4px 4px;
+  }
+  .leaflet-control.map-title .headline{
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    padding: 0px 5px;
+    background-color: #F98C00;
+    background:#0059F6;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .leaflet-control.map-title .subheadline {
+    font-size: 14px;
+    color: black;
+    padding: 5px 30px 5px 10px;
+    background: white;
+    border-radius: 0px 0px 4px 4px;
+  }
+  .leaflet-control.map-title .subheadline a {
+    color: #BE0000;
+    font-weight: bold;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .leaflet-control.map-title .headline {
+      font-size: 20px;
+    border-radius: 4px 4px 0px 0px;
+    }
+    .leaflet-control.map-title .subheadline {
+      font-size: 10px;
+    border-radius: 0px 0px 4px 4px;
+    }
+  @media only screen and (max-width: 420px) {
+    .leaflet-control.map-title .headline {
+      font-size: 18px;
+    border-radius: 4px 4px 0px 0px;
+    }
+    .leaflet-control.map-title .subheadline {
+      font-size: 9px;
+    border-radius: 0px 0px 4px 4px;
+    }
+"))
+
+sfheaderhtml <- tags$div(
+  tag.map.title, HTML(paste(sep="",
+                            "<div class='headline'>Air Quality Tracker</div>
+  <div class='subheadline'>See how wildfire smoke, smog and weather are impacting air quality across the Bay Area and statewide.<div>")
+  )
+)
+
 # Temporary replacement for existing Cali-only
-# air quality maps for all three CA stations
+# air quality maps for all stations
 
 # SAN FRANCISCO
-airquality_map_SF <- leaflet() %>%
+airquality_map_SF <- leaflet(options = leafletOptions(zoomControl = FALSE, hoverToWake=FALSE)) %>%
   setView(-122.4194, 37.77, zoom = 9) %>% 
   addProviderTiles(provider = "Stamen.Toner") %>%
   addPolygons(data = air_quality, 
@@ -35,7 +94,11 @@ airquality_map_SF <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("<small>Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'topright')
+            position = 'topright') %>% 
+      addControl(position = "topleft", html = sfheaderhtml, className="map-title") %>%  
+      htmlwidgets::onRender("function(el, x) {
+        L.control.zoom({ position: 'topleft'}).addTo(this)
+    }") 
 
 # FRESNO
 airquality_map_Fresno <- leaflet() %>%
