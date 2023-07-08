@@ -29,7 +29,7 @@ tag.map.title <- tags$style(HTML("
     top: 0.8%;
     text-align: left;
     background-color: background:#0059F6;
-    width: 60%;
+    width: 50%;
     border-radius: 4px 4px 4px 4px;
   }
   .leaflet-control.map-title .headline{
