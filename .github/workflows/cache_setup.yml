@@ -1,8 +1,13 @@
 name: Setup R environment cache
 
+# This workflow does exactly as it says, setting a cache of the 
+# R and runner environment to speed up deployment of the recurring
+# triggers so R, gdal, packages, etc., aren't reinstalling every time
+# It runs weekly to refresh the cache
+
 on:
   schedule:
-    # Run once a week at 00:00 on Monday
+    # Run once a week overnight Monday
     - cron: '0 0 * * 1'
   workflow_dispatch:
   

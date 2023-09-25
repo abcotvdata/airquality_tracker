@@ -1,6 +1,10 @@
+# This workflow triggers the rebuilding of the Air Quality maps every 20 minutes
+# This frequency is likely overkill because AirNow only updates the file once an hour
+# But, redundancy here because of periodic delays in AirNow posting and periodic outages
+
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/20 * * * *'
       # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

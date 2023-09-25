@@ -4,14 +4,17 @@ library(htmltools)
 library(sf)
 library(htmlwidgets)
 
-# BELOW IS NOW A SEPARATE TRIGGER IN THE GITHUB ACTIONS VERSION;
-# CAN BE RUN HERE MANUALLY AS NEEDED
-# Latest Air Quality geofile from AirNow via federal government
+# Obtain the latest air quality geofile from AirNow via federal government
+# This step is now automated in a yaml trigger by Github Actions; see workflows
+# Left here in case it ever needs to be run manually
 # try(download.file("https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/AirNowLatestContoursCombined/FeatureServer/0/query?where=0%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&returnCentroid=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pgeojson","data/airnow_aq.geojson"))
 
+# Read in the air quality .geojson file
+# We're using the combined contour file, which
+# combines ozone and PM25 which is the primary measure for AQI
 air_quality <- st_read("data/airnow_aq.geojson")
 
-# Create color palette for air quality
+# Creating a color palette for air quality levels to match AQI/AirNow's method
 airpal <- colorFactor(palette = c("#b1dbad", 
                                   "#ffffb8", 
                                   "#ffcc80",
@@ -21,8 +24,8 @@ airpal <- colorFactor(palette = c("#b1dbad",
                       levels = c("1", "2", "3", "4","5","6"), 
                       na.color = "#ff8280")
 
-# title and subhead for SF map
-
+# Creating a unique title and subhead for SF map
+# to satisfy a special request from the KGO digital team
 tag.map.title <- tags$style(HTML("
   .leaflet-control.map-title {
     left: 0.5%;
@@ -80,8 +83,9 @@ sfheaderhtml <- tags$div(
   )
 )
 
-# Temporary replacement for existing Cali-only
-# air quality maps for all stations
+# Creation of a series of leaflet maps, customized to zoom to each station's coverage area
+# Note that the San Francisco version calls the above specialty header text
+# The others are standard, but could be customized in a similar way
 
 # SAN FRANCISCO
 airquality_map_SF <- leaflet(options = leafletOptions(zoomControl = FALSE, hoverToWake=FALSE)) %>%
@@ -239,4 +243,3 @@ saveWidget(airquality_map_Raleigh, 'docs/map_AQ_Raleigh.html', title = "ABC11 Ai
 saveWidget(airquality_map_NYC, 'docs/map_AQ_NYC.html', title = "ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_National, 'docs/map_AQ_National.html', title = "ABC Owned Television Stations Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Nationwide, 'docs/map_AQ_Nationwide.html', title = "ABC Owned Television Stations Air Quality Tracker", selfcontained = TRUE)
-
