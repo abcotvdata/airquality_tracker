@@ -90,7 +90,7 @@ sfheaderhtml <- tags$div(
 # SAN FRANCISCO
 airquality_map_SF <- leaflet(options = leafletOptions(zoomControl = FALSE, hoverToWake=FALSE)) %>%
   setView(-122.4194, 37.77, zoom = 9) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -108,7 +108,7 @@ airquality_map_SF <- leaflet(options = leafletOptions(zoomControl = FALSE, hover
 # FRESNO
 airquality_map_Fresno <- leaflet() %>%
   setView(-119.7871, 36.73, zoom = 9) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -122,7 +122,7 @@ airquality_map_Fresno <- leaflet() %>%
 # LOS ANGELES
 airquality_map_LA <- leaflet() %>%
   setView(-118.161229, 33.957379, zoom = 8) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -136,7 +136,7 @@ airquality_map_LA <- leaflet() %>%
 # NEW YORK
 airquality_map_NYC <- leaflet() %>%
   setView(-73.9, 40.712, zoom = 10) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -150,7 +150,7 @@ airquality_map_NYC <- leaflet() %>%
 # CHICAGO
 airquality_map_Chicago <- leaflet() %>%
   setView(-87.6298, 41.8781, zoom = 10) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -164,7 +164,7 @@ airquality_map_Chicago <- leaflet() %>%
 # PHILLY
 airquality_map_Philadelphia <- leaflet() %>%
   setView(-75.162, 39.9526, zoom = 10) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -178,7 +178,7 @@ airquality_map_Philadelphia <- leaflet() %>%
 # HOUSTON
 airquality_map_Houston <- leaflet() %>%
   setView(-95.5, 29.75, zoom = 9) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -192,7 +192,7 @@ airquality_map_Houston <- leaflet() %>%
 # RALEIGH
 airquality_map_Raleigh <- leaflet() %>%
   setView(-78.64, 35.77, zoom = 9) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -206,7 +206,7 @@ airquality_map_Raleigh <- leaflet() %>%
 # NATIONAL - ZOOMED TO HIGHEST RISK LEVEL AREAS
 airquality_map_National <- leaflet() %>%
   setView(-75.162, 39.9526, zoom = 6) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
@@ -220,7 +220,7 @@ airquality_map_National <- leaflet() %>%
 # NATIONWIDE
 airquality_map_Nationwide <- leaflet() %>%
   setView(-98.35, 39.5, zoom = 5) %>% 
-  addProviderTiles(provider = "Stamen.Toner") %>%
+  addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
               weight = 0,
