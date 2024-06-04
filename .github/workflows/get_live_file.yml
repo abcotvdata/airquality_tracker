@@ -53,3 +53,22 @@ jobs:
         with:
           message: 'Add airnow_aq_ozone.geojson'
           add: 'data/airnow_aq_ozone.geojson'
+      - name: Download and check PM2.5 file
+        run: |
+          error=true
+          while [ "$error" = true ]; do
+            curl -o "data/airnow_aq_raw_PM25.geojson" "https://services.arcgis.com/cJ9YHowT8TU7DUyn/ArcGIS/rest/services/AirNowLatestContoursPM25/FeatureServer/0/query?where=0%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&returnCentroid=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pgeojson"
+            if grep -q 'error' data/airnow_aq_raw_PM25.geojson; then
+              error=true
+            else
+              error=false
+            fi
+          done
+      - name: Copy file if no error
+        run: |
+          cp data/airnow_aq_raw_PM25.geojson data/airnow_aq_PM25.geojson
+      - name: Commit file
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Add airnow_aq_PM25.geojson'
+          add: 'data/airnow_aq_PM25.geojson'
