@@ -205,7 +205,7 @@ airquality_map_Raleigh <- leaflet() %>%
 
 # NATIONAL - ZOOMED TO HIGHEST RISK LEVEL AREAS
 airquality_map_National <- leaflet() %>%
-  setView(-75.162, 39.9526, zoom = 6) %>% 
+  setView(-118.1230796, 41.6904052, zoom = 6) %>% 
   addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
               color = ~airpal(gridcode),
