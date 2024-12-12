@@ -24,8 +24,8 @@ airpal <- colorFactor(palette = c("#b1dbad",
                       levels = c("1", "2", "3", "4","5","6"), 
                       na.color = "#ff8280")
 
-# Creating a unique title and subhead for SF map
-# to satisfy a special request from the KGO digital team
+# Creating a unique title and subhead for SF and LA maps
+# to satisfy a special request from the digital teams
 tag.map.title <- tags$style(HTML("
   .leaflet-control.map-title {
     left: 0.5%;
@@ -91,7 +91,7 @@ laheaderhtml <- tags$div(
 )
 
 # Creation of a series of leaflet maps, customized to zoom to each station's coverage area
-# Note that the San Francisco version calls the above specialty header text
+# Note that the San Francisco and one of the Los Angeles maps calls the above specialty header text
 # The others are standard, but could be customized in a similar way
 
 # SAN FRANCISCO
@@ -140,7 +140,7 @@ airquality_map_LA <- leaflet() %>%
             labels=c("<small>Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
             position = 'topright')
 
-airquality_map_LA_full <- leaflet() %>%
+airquality_map_LA_full <- leaflet(options = leafletOptions(zoomControl = FALSE, hoverToWake=FALSE)) %>%
   setView(-118.161229, 33.957379, zoom = 8) %>% 
   addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
