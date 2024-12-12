@@ -83,6 +83,13 @@ sfheaderhtml <- tags$div(
   )
 )
 
+laheaderhtml <- tags$div(
+  tag.map.title, HTML(paste(sep="",
+                            "<div class='headline'>Air Quality Tracker</div>
+  <div class='subheadline'>See how wildfire smoke, smog and weather are impacting air quality across Southern California and statewide.<div>")
+  )
+)
+
 # Creation of a series of leaflet maps, customized to zoom to each station's coverage area
 # Note that the San Francisco version calls the above specialty header text
 # The others are standard, but could be customized in a similar way
@@ -121,6 +128,22 @@ airquality_map_Fresno <- leaflet() %>%
 
 # LOS ANGELES
 airquality_map_LA <- leaflet() %>%
+  setView(-118.161229, 33.957379, zoom = 8) %>% 
+  addProviderTiles(provider = "CartoDB.Positron") %>%
+  addPolygons(data = air_quality, 
+              color = ~airpal(gridcode),
+              weight = 0,
+              fillOpacity = 0.6) %>%
+  addLegend(values = values(air_quality$gridcode), title = "<small>Air Quality Index<br><a href='https://www.airnow.gov/aqi/aqi-basics/' target='blank'>What AQI ratings mean</a>", 
+            group = "Air Quality", 
+            colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
+            labels=c("<small>Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
+            position = 'topright') %>%
+addControl(position = "topleft", html = laheaderhtml, className="map-title") %>%  
+      htmlwidgets::onRender("function(el, x) {
+        L.control.zoom({ position: 'topleft'}).addTo(this)
+
+airquality_map_LA_full <- leaflet() %>%
   setView(-118.161229, 33.957379, zoom = 8) %>% 
   addProviderTiles(provider = "CartoDB.Positron") %>%
   addPolygons(data = air_quality, 
@@ -235,6 +258,7 @@ airquality_map_Nationwide <- leaflet() %>%
 # saveWidget(california_map, 'docs/map_california.html', title = "ABC Owned Television Stations Wildfire Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_SF, 'docs/map_AQ_SF.html', title = "ABC Owned Television Stations ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_LA, 'docs/map_AQ_LA.html', title = "ABC Owned Television Stations ABC7 Air Quality Tracker", selfcontained = TRUE)
+saveWidget(airquality_map_LA_full, 'docs/map_AQ_LA_full.html', title = "ABC Owned Television Stations ABC7 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Fresno, 'docs/map_AQ_Fresno.html', title = "ABC30 Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Philadelphia, 'docs/map_AQ_Philadelphia.html', title = "6ABC Air Quality Tracker", selfcontained = TRUE)
 saveWidget(airquality_map_Chicago, 'docs/map_AQ_Chicago.html', title = "ABC7 Air Quality Tracker", selfcontained = TRUE)
