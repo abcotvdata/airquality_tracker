@@ -138,10 +138,7 @@ airquality_map_LA <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("<small>Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'topright') %>%
-addControl(position = "topleft", html = laheaderhtml, className="map-title") %>%  
-      htmlwidgets::onRender("function(el, x) {
-        L.control.zoom({ position: 'topleft'}).addTo(this)
+            position = 'topright')
 
 airquality_map_LA_full <- leaflet() %>%
   setView(-118.161229, 33.957379, zoom = 8) %>% 
@@ -154,7 +151,11 @@ airquality_map_LA_full <- leaflet() %>%
             group = "Air Quality", 
             colors = c("#b1dbad", "#ffffb8", "#ffcc80","#ff8280","#957aa3","#a18f7f","#dde4f0"),
             labels=c("<small>Good", "Moderate", "Unhealthy for<br>Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous","No AQ Data"),
-            position = 'topright')
+            position = 'topright') %>%
+  addControl(position = "topleft", html = laheaderhtml, className="map-title") %>%  
+      htmlwidgets::onRender("function(el, x) {
+        L.control.zoom({ position: 'topleft'}).addTo(this)
+  }") 
 
 # NEW YORK
 airquality_map_NYC <- leaflet() %>%
