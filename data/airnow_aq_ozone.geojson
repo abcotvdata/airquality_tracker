@@ -43,8 +43,8 @@
         "OBJECTID" : 1, 
         "Id" : 1, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 59378704168.210938, 
         "Shape__Length" : 914602.17555570148
       }
@@ -99,8 +99,8 @@
         "OBJECTID" : 2, 
         "Id" : 2, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 138415582766.875, 
         "Shape__Length" : 1370986.1910174445
       }
@@ -147,8 +147,8 @@
         "OBJECTID" : 3, 
         "Id" : 3, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 51041356337.644531, 
         "Shape__Length" : 846765.04774312372
       }
@@ -207,8 +207,8 @@
         "OBJECTID" : 4, 
         "Id" : 4, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 38270787279.941406, 
         "Shape__Length" : 839189.95591875073
       }
@@ -256,8 +256,8 @@
         "OBJECTID" : 5, 
         "Id" : 5, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 65183877902.964844, 
         "Shape__Length" : 956942.73689875018
       }
@@ -336,8 +336,8 @@
         "OBJECTID" : 6, 
         "Id" : 6, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 114961868949.55078, 
         "Shape__Length" : 1915466.524642637
       }
@@ -387,8 +387,8 @@
         "OBJECTID" : 7, 
         "Id" : 7, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 74342790958.3789, 
         "Shape__Length" : 1013054.5541450086
       }
@@ -465,8 +465,8 @@
         "OBJECTID" : 8, 
         "Id" : 8, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 17274665559.972656, 
         "Shape__Length" : 848714.19933822076
       }
@@ -492,8 +492,8 @@
         "OBJECTID" : 9, 
         "Id" : 9, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 154799387.72265625, 
         "Shape__Length" : 52212.124598305687
       }
@@ -525,8 +525,8 @@
         "OBJECTID" : 10, 
         "Id" : 10, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 1046768806.1679688, 
         "Shape__Length" : 130816.75088607866
       }
@@ -534,43 +534,6 @@
     {
       "type" : "Feature", 
       "id" : 11, 
-      "geometry" : 
-      {
-        "type" : "Polygon", 
-        "coordinates" : 
-        [
-          [
-            [-96.73144699868, 44.0927626708607], 
-            [-96.9675640018771, 44.1098228100747], 
-            [-97.0777849118442, 44.2083165605609], 
-            [-97.0843409695601, 44.3182406942527], 
-            [-97.0447707995327, 44.4044497055895], 
-            [-96.9764493036923, 44.4809190591673], 
-            [-96.8060097895201, 44.5735402366927], 
-            [-96.6901771099856, 44.5804380367861], 
-            [-96.5464474605818, 44.5360564938122], 
-            [-96.4770557715066, 44.4740572319558], 
-            [-96.4292927776395, 44.3409395826957], 
-            [-96.522561467038, 44.1942871366421], 
-            [-96.6437181330853, 44.1284567628694], 
-            [-96.7208260053158, 44.1046427150893], 
-            [-96.73144699868, 44.0927626708607]
-          ]
-        ]
-      }, 
-      "properties" : {
-        "OBJECTID" : 11, 
-        "Id" : 11, 
-        "gridcode" : 2, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
-        "Shape__Area" : 4127735594.5820313, 
-        "Shape__Length" : 232920.81132578163
-      }
-    }, 
-    {
-      "type" : "Feature", 
-      "id" : 12, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -593,18 +556,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 12, 
-        "Id" : 12, 
+        "OBJECTID" : 11, 
+        "Id" : 11, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 372669349.6171875, 
         "Shape__Length" : 95229.682972250972
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 13, 
+      "id" : 12, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -619,18 +582,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 13, 
-        "Id" : 13, 
+        "OBJECTID" : 12, 
+        "Id" : 12, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 5648178.1328125, 
         "Shape__Length" : 10981.911489251712
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 14, 
+      "id" : 13, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -651,18 +614,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 14, 
-        "Id" : 14, 
+        "OBJECTID" : 13, 
+        "Id" : 13, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 791929047.421875, 
         "Shape__Length" : 139824.503810915
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 15, 
+      "id" : 14, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -679,18 +642,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 15, 
-        "Id" : 15, 
+        "OBJECTID" : 14, 
+        "Id" : 14, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 228968524.27734375, 
         "Shape__Length" : 61406.514683192785
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 16, 
+      "id" : 15, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -712,18 +675,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 16, 
-        "Id" : 16, 
+        "OBJECTID" : 15, 
+        "Id" : 15, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 837962710.890625, 
         "Shape__Length" : 134162.34887225911
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 17, 
+      "id" : 16, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -750,18 +713,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 17, 
-        "Id" : 17, 
+        "OBJECTID" : 16, 
+        "Id" : 16, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 898198303.94921875, 
         "Shape__Length" : 150640.42077548828
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 18, 
+      "id" : 17, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -784,18 +747,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 18, 
-        "Id" : 18, 
+        "OBJECTID" : 17, 
+        "Id" : 17, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 658588055.16796875, 
         "Shape__Length" : 114338.21290197145
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 19, 
+      "id" : 18, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -815,18 +778,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 19, 
-        "Id" : 19, 
+        "OBJECTID" : 18, 
+        "Id" : 18, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 276642329.42578125, 
         "Shape__Length" : 66273.7132582574
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 20, 
+      "id" : 19, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -845,18 +808,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 20, 
-        "Id" : 20, 
+        "OBJECTID" : 19, 
+        "Id" : 19, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 575474050.07421875, 
         "Shape__Length" : 112678.16009731099
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 21, 
+      "id" : 20, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -874,18 +837,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 21, 
-        "Id" : 21, 
+        "OBJECTID" : 20, 
+        "Id" : 20, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 141471738.75, 
         "Shape__Length" : 53597.839668067973
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 22, 
+      "id" : 21, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -906,18 +869,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 22, 
-        "Id" : 22, 
+        "OBJECTID" : 21, 
+        "Id" : 21, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 443183903.47851563, 
         "Shape__Length" : 117490.46346089442
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 23, 
+      "id" : 22, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -955,18 +918,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 23, 
-        "Id" : 23, 
+        "OBJECTID" : 22, 
+        "Id" : 22, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 51195035517.398438, 
         "Shape__Length" : 813900.58455147443
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 24, 
+      "id" : 23, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -988,18 +951,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 24, 
-        "Id" : 24, 
+        "OBJECTID" : 23, 
+        "Id" : 23, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 358584500.02734375, 
         "Shape__Length" : 106689.16478940351
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 25, 
+      "id" : 24, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -3089,23 +3052,6 @@
             [-68.2920600305459, 44.1811120686671]
           ], 
           [
-            [-96.73144699868, 44.0927626708607], 
-            [-96.7208260053158, 44.1046427150893], 
-            [-96.6437181330853, 44.1284567628694], 
-            [-96.522561467038, 44.1942871366421], 
-            [-96.4292927776395, 44.3409395826957], 
-            [-96.4770557715066, 44.4740572319558], 
-            [-96.5464474605818, 44.5360564938122], 
-            [-96.6901771099856, 44.5804380367861], 
-            [-96.8060097895201, 44.5735402366927], 
-            [-96.9764493036923, 44.4809190591673], 
-            [-97.0447707995327, 44.4044497055895], 
-            [-97.0843409695601, 44.3182406942527], 
-            [-97.0777849118442, 44.2083165605609], 
-            [-96.9675640018771, 44.1098228100747], 
-            [-96.73144699868, 44.0927626708607]
-          ], 
-          [
             [-66.1006730076531, 43.6426340003589], 
             [-66.1083712043675, 43.6688222583406], 
             [-66.1282911876881, 43.650754878435], 
@@ -3461,18 +3407,18 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 25, 
-        "Id" : 25, 
+        "OBJECTID" : 24, 
+        "Id" : 24, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
-        "Shape__Area" : 16368845424291.154, 
-        "Shape__Length" : 57007537.873859741
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
+        "Shape__Area" : 16372973159885.736, 
+        "Shape__Length" : 56774617.062533967
       }
     }, 
     {
       "type" : "Feature", 
-      "id" : 26, 
+      "id" : 25, 
       "geometry" : 
       {
         "type" : "Polygon", 
@@ -3506,11 +3452,11 @@
         ]
       }, 
       "properties" : {
-        "OBJECTID" : 26, 
-        "Id" : 26, 
+        "OBJECTID" : 25, 
+        "Id" : 25, 
         "gridcode" : 1, 
-        "Timestamp" : 1794758400000, 
-        "Unixtime" : 1794758400, 
+        "Timestamp" : 1794776400000, 
+        "Unixtime" : 1794776400, 
         "Shape__Area" : 58886384462.052734, 
         "Shape__Length" : 891393.42681888922
       }
